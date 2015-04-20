@@ -1,0 +1,5 @@
+../node_modules/grunt-contrib-imagemin/node_modules/imagemin/node_modules/imagemin-optipng/node_modules/optipng-bin/node_modules/bin-build/node_modules/decompress/node_modules/decompress-tar/node_modules/tar-stream/node_modules
+dist
+.tmp
+.sass-cache
+bower_components
