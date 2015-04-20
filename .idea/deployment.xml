@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="Local 1" createEmptyFolders="true" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="Local 1">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/maximenicole/node-global" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/.idea" />
+            <excludedPath local="true" path="$PROJECT_DIR$/api/node_modules" />
+            <excludedPath local="true" path="$PROJECT_DIR$/httpdocs/bower_components" />
+            <excludedPath local="true" path="$PROJECT_DIR$/httpdocs/node_modules" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
+  </component>
+</project>

@@ -1,5 +1,5 @@
 /**
- * Tasks.js
+ * Categories.js
  *
  * @desciption :: Model for tasks
  */
@@ -20,17 +20,9 @@ module.exports = {
       type: 'string'
     },
 
-    status: {
-      type: 'boolean',
-      defaultsTo: false
-    },
-
-    deadLine: {
-      type: 'datetime'
-    },
-
-    category: {
-      model: 'categories'
+    tasks: {
+      collection: 'tasks',
+      via: 'category'
     }
 
   }

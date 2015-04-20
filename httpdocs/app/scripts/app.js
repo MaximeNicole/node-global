@@ -1,15 +1,16 @@
-'use strict';
+(function () {
 
-/**
- * @ngdoc overview
- * @name httpdocsApp
- * @description
- * # httpdocsApp
- *
- * Main module of the application.
- */
-angular
-  .module('httpdocsApp', [
+  'use strict';
+
+  /**
+   * @ngdoc overview
+   * @name httpdocsApp
+   * @description
+   * # httpdocsApp
+   *
+   * Main module of the application.
+   */
+  var app = angular.module('httpdocsApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,18 +19,10 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  ]);
+
+  app.value('appConf', {
+    api: 'http://localhost:1337'
   });
+
+})();

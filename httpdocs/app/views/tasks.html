@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Tasks</h2>
+  </div>
+  <div class="col-xs-12">
+    <form id="task-form" ng-submit="addTask()">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <td>Status</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Category</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="task in tasks" class="{{(task.status?'task-success':'task-tomake')}}">
+            <td>
+              <button type="button" class="btn {{(task.status?'btn-success':'btn-warning')}}" ng-click="makeTask(task)">
+                {{(task.status?'OK':'To make')}}
+              </button>
+            </td>
+            <td ng-bind="task.name"></td>
+            <td ng-bind="task.description"></td>
+            <td ng-bind="task.category.name"></td>
+            <td>
+              <button type="button" class="btn btn-danger btn-md" ng-click="removeTask(task.id)">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td><input type="text" class="form-control" placeholder="Name" ng-model="task.name"></td>
+            <td><input type="text" class="form-control" placeholder="Description" ng-model="task.description"></td>
+            <td>
+              <select ng-options="category.name for category in categories track by category.id"
+                      ng-model="task.category" class="form-control">
+                <option>--- Category ---</option>
+              </select>
+            </td>
+            <td><input type="submit" class="btn btn-success btn-md" value="Add"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+  </div>
+</div>
